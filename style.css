@@ -1,0 +1,158 @@
+/* Page base - font, full-height layout, and neutral text color */
+:root{
+	/* Nature-inspired blue & teal palette */
+	--teal-500: #00c2a8;
+	--teal-600: #00a887;
+	--blue-400: #2aa4d4;
+	--blue-600: #15639a;
+	--banner-dark: #0f3b63;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: Inter, Arial, Helvetica, sans-serif; /* modern, readable font */
+	color: #0b1720;
+}
+
+/* Header - simple site name bar */
+.site-header{
+	background: linear-gradient(90deg, var(--blue-400), var(--banner-dark));
+	color: #fff;
+	padding: 0.6rem 1rem;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.site-inner{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.site-title{
+	margin: 0;
+	font-size: 1.125rem;
+	font-weight: 700;
+	letter-spacing: 0.2px;
+}
+
+/* CTA Banner */
+.cta-banner{
+	/* Tall banner using a photo background with a soft overlay */
+	background: linear-gradient(180deg, rgba(15,59,99,0.45), rgba(15,59,99,0.65)), url("img/cta-bg.jpg") center/cover no-repeat;
+	color: #fff;
+	text-align: center;
+	padding: 4rem 1rem 10rem; /* shorter top padding, taller bottom */
+	min-height: 88vh; /* taller banner */
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.cta-content{
+	/* Constrain content width for readable line lengths */
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cta-banner h1{
+	/* Large, attention-grabbing heading */
+	font-size: 3.6rem;
+	margin: 0 0 1.5rem 0;
+	line-height: 1.08;
+	text-shadow: 0 4px 18px rgba(0,0,0,0.25);
+}
+
+.cta-desc{
+	/* Short supporting description to explain why fostering matters */
+	font-size: 1.125rem;
+	margin: 0 0 2rem 0;
+	opacity: 0.95;
+}
+
+.cta-button{
+	/* Bright, eye-catching CTA that contrasts with the blue/teal banner */
+	background: linear-gradient(180deg, var(--teal-500), var(--teal-600));
+	color: #042026;
+	text-decoration: none;
+	padding: 0.95rem 1.8rem;
+	border-radius: 10px;
+	font-weight: 700;
+	box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+	display: inline-block;
+	margin-top: 0.5rem;
+}
+
+.cta-button:hover,
+.cta-button:focus{
+	background: linear-gradient(180deg, var(--teal-600), var(--teal-500));
+	transform: translateY(-2px);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+	.cta-banner{
+		padding: 5rem 1rem;
+	}
+	.cta-banner h1{
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+	}
+	.cta-desc{
+		font-size: 1rem;
+		margin-bottom: 1.25rem;
+	}
+}
+
+/* Info section below the banner */
+.info-section{
+	padding: 4rem 1rem;
+	background: #f5fbff;
+  
+}
+
+.info-grid{
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.info-image,
+.info-text{
+	flex: 1;
+}
+
+.info-image img{
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.info-text{
+	text-align: left;
+}
+
+.info-text h3{
+	font-size: 2rem;
+	margin: 0 0 1rem 0;
+}
+
+.info-text p{
+	font-size: 1rem;
+	line-height: 1.75;
+	margin: 0 0 1rem 0;
+}
+
+@media (max-width: 900px) {
+	.info-grid{
+		flex-direction: column;
+	}
+}
+
